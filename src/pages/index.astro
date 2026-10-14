@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import FounderOffer from '../components/FounderOffer.astro';
+import Services from '../components/Services.astro';
+import ConceptPuzzle from '../components/ConceptPuzzle.astro';
+import DentalScore from '../components/DentalScore.astro';
+import FindUs from '../components/FindUs.astro';
+import Footer from '../components/Footer.astro';
+import VideoModal from '../components/VideoModal.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Kind Dental — The First of Its Kind | Modern Dental Care at centre:mk"
+  description="Dentistry, rebuilt around how people feel. Join the limited Founder Waitlist for 50% off teeth whitening, complimentary membership, and priority booking at centre:mk Milton Keynes."
+>
+  <Header />
+  <main id="main-content">
+    <Hero />
+    <FounderOffer />
+    <Services />
+    <ConceptPuzzle />
+    <DentalScore />
+    <FindUs />
+  </main>
+  <Footer />
+  <VideoModal />
+</Layout>

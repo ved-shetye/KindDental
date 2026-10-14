@@ -1,0 +1,195 @@
+---
+---
+
+<section class="find-us-section" id="find-us">
+  <div class="container">
+    <div class="find-us-grid">
+      <!-- Left Column: Story & Context -->
+      <div class="find-us-content">
+        <span class="section-tag font-sans">FIND US</span>
+        <h2 class="find-us-heading font-serif">Right where the city already gathers</h2>
+        <div class="find-us-paragraphs font-sans">
+          <p>
+            Kind Dental will open at centre:mk, between John Lewis and Next, opposite Centre Court — one of the most visited destinations in Milton Keynes, open every day of the week.
+          </p>
+          <p>
+            If you're at the Christmas Market on the square this season, the hoarding above our doors has this same code — scan it, and you'll be first to know when we open.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: Location Metadata Card & Concourse Photo -->
+      <div class="find-us-card-col">
+        <div class="location-card editorial-card">
+          <dl class="location-details-list font-sans">
+            <div class="detail-row">
+              <dt class="detail-label">Location</dt>
+              <dd class="detail-value">centre:mk, Milton Keynes</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Position</dt>
+              <dd class="detail-value">Between John Lewis & Next</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Opening hours</dt>
+              <dd class="detail-value">7 days a week</dd>
+            </div>
+            <div class="detail-row">
+              <dt class="detail-label">Status</dt>
+              <dd class="detail-value status-badge">
+                <span class="status-pulse-dot" aria-hidden="true"></span>
+                Opening soon
+              </dd>
+            </div>
+          </dl>
+
+          <!-- Shopping Center / John Lewis Storefront Photo -->
+          <div class="location-visual-wrapper">
+            <img
+              src="/centre-mk-location.jpg"
+              alt="centre:mk Milton Keynes concourse outside John Lewis"
+              class="location-concourse-img"
+              loading="lazy"
+            />
+            <div class="visual-caption-tag font-sans">
+              <span>📍 Opposite Centre Court, centre:mk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .find-us-section {
+    padding: 90px 0;
+    background-color: var(--bg-page);
+  }
+
+  .find-us-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .find-us-heading {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .find-us-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1.02rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 500px;
+  }
+
+  /* Location Card */
+  .location-card {
+    background-color: var(--bg-card);
+    padding: 32px 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .location-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(24, 21, 18, 0.1);
+  }
+
+  .detail-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .detail-label {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .detail-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: right;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .status-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4BB58B;
+    box-shadow: 0 0 0 2px rgba(75, 181, 139, 0.3);
+    animation: pulseDot 2s infinite;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+  }
+
+  /* Storefront Photo */
+  .location-visual-wrapper {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: var(--border-width) solid var(--border-ink);
+  }
+
+  .location-concourse-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .location-visual-wrapper:hover .location-concourse-img {
+    transform: scale(1.03);
+  }
+
+  .visual-caption-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(24, 21, 18, 0.85);
+    backdrop-filter: blur(6px);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+  }
+
+  @media (max-width: 850px) {
+    .find-us-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+</style>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-page: #FAF7F2;
+  --bg-card: #EFE9DF;
+  --bg-card-subtle: #F5EFE6;
+  --bg-dark: #1E1A17;
+  --text-dark: #181512;
+  --text-muted: #5E564F;
+  --text-light: #FAF7F2;
+  --text-light-muted: #BDB5AC;
+  --brand-terracotta: #B85834;
+  --brand-yellow: #F4BF3A;
+  --brand-coral: #EA695B;
+  --brand-purple: #A78BFA;
+  --brand-mint: #4BB58B;
+  --brand-blue: #4E9CD4;
+  --border-ink: #181512;
+  --border-width: 1.5px;
+  --shadow-sm: 2px 2px 0px #181512;
+  --shadow-md: 3px 3px 0px #181512;
+  --shadow-lg: 5px 5px 0px #181512;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.section-tag {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-terracotta);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+/* Wavy decorative underline stroke */
+.wavy-underline {
+  display: block;
+  width: 110px;
+  height: 12px;
+  margin: 12px auto 0;
+}
+
+.wavy-underline.left {
+  margin: 8px 0 0;
+}
+
+/* Shared Neo-brutalist / Soft Editorial Card */
+.editorial-card {
+  background-color: var(--bg-card);
+  border: var(--border-width) solid var(--border-ink);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Pill Buttons */
+.btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--border-ink);
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--border-ink);
+  transition: all 0.2s ease;
+}
+
+.btn-pill-dark:hover {
+  background-color: #2F2A26;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-pill-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--brand-yellow);
+  color: var(--text-dark);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-ink);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.18s ease;
+}
+
+.btn-pill-yellow:hover {
+  background-color: #F8CB54;
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-pill-yellow:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border-ink);
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C2B8A7;
+}

@@ -1,0 +1,151 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <!-- Tagline from video -->
+    <div class="footer-tagline-block">
+      <h3 class="footer-tagline font-serif">
+        Prevention. Awareness. Confidence. <span class="footer-emoji">😊</span>
+      </h3>
+      <p class="footer-legal font-sans">
+        Kind Dental — trading through RAIRD Limited · centre:mk, Milton Keynes
+      </p>
+    </div>
+
+    <!-- Navigation & Links -->
+    <div class="footer-nav-bar font-sans">
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#concept">Core Values</a>
+        <a href="#dental-score">Kind Dental Score</a>
+        <a href="#find-us">Location</a>
+        <a href="#founder-offer">Founder Waitlist</a>
+      </div>
+
+      <button type="button" class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top">
+        <span>Back to top</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="footer-bottom font-sans">
+      <p class="copyright-text">
+        © 2026 Kind Dental. All rights reserved. Registered in England & Wales.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+<style>
+  .site-footer {
+    padding: 70px 0 40px;
+    background-color: var(--bg-page);
+    border-top: 1px solid rgba(24, 21, 18, 0.08);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-tagline-block {
+    margin-bottom: 36px;
+  }
+
+  .footer-tagline {
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .footer-legal {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .footer-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px 0;
+    border-top: 1px solid rgba(24, 21, 18, 0.08);
+    border-bottom: 1px solid rgba(24, 21, 18, 0.08);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.18s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--text-dark);
+  }
+
+  .back-to-top-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(24, 21, 18, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .back-to-top-btn:hover {
+    background-color: var(--bg-card);
+    transform: translateY(-2px);
+  }
+
+  .footer-bottom {
+    width: 100%;
+  }
+
+  .copyright-text {
+    font-size: 0.8rem;
+    color: #8C847B;
+  }
+
+  @media (max-width: 640px) {
+    .footer-nav-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-links {
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,281 @@
+---
+---
+
+<div class="video-modal-backdrop" id="video-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="video-modal-card">
+    <button type="button" class="modal-close-btn" id="close-modal-btn" aria-label="Close story modal">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <div class="modal-media-wrapper">
+      <img
+        src="/jane-story.jpg"
+        alt="Jane welcoming you to Kind Dental"
+        class="modal-story-img"
+      />
+      <div class="media-badge">
+        <span class="live-dot"></span>
+        <span>JANE'S STORY · FOUNDER PREVIEW</span>
+      </div>
+    </div>
+
+    <div class="modal-body-content">
+      <h3 class="modal-story-title font-serif">"Dentistry, reimagined around how you feel."</h3>
+      
+      <p class="modal-story-text font-sans">
+        Meet Jane. Walking past the new Kind Dental studio opening at centre:mk Milton Keynes, you'll see our storefront come alive with her story — gentle care, clear pricing, and no fear. Be one of the first 1,000 founders to experience the difference.
+      </p>
+
+      <!-- Interactive Story Audio / Player Controls -->
+      <div class="story-audio-box">
+        <button type="button" class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Play Founder Narration">
+          <span class="audio-play-icon" id="audio-play-icon">▶</span>
+          <span class="audio-btn-text" id="audio-btn-text">Listen to Founder's Story</span>
+        </button>
+        <audio id="story-audio" preload="none" src="/scratch-audio.mp3"></audio>
+      </div>
+
+      <div class="modal-actions-row">
+        <a href="#founder-offer" class="btn-pill-yellow modal-cta-btn" id="modal-join-btn">
+          Claim 1 of 1,000 Founder Spots
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('video-modal');
+  const openBtn = document.getElementById('open-video-btn');
+  const closeBtn = document.getElementById('close-modal-btn');
+  const modalJoinBtn = document.getElementById('modal-join-btn');
+  const audioBtn = document.getElementById('audio-toggle-btn');
+  const audioEl = document.getElementById('story-audio') as HTMLAudioElement | null;
+  const playIcon = document.getElementById('audio-play-icon');
+  const btnText = document.getElementById('audio-btn-text');
+
+  function openModal() {
+    if (modal) {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (audioEl && !audioEl.paused) {
+        audioEl.pause();
+        if (playIcon) playIcon.textContent = '▶';
+        if (btnText) btnText.textContent = "Listen to Founder's Story";
+      }
+    }
+  }
+
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (modalJoinBtn) modalJoinBtn.addEventListener('click', closeModal);
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal?.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+
+  // Audio preview playback
+  if (audioBtn && audioEl) {
+    audioBtn.addEventListener('click', () => {
+      if (audioEl.paused) {
+        audioEl.play().then(() => {
+          if (playIcon) playIcon.textContent = '⏸';
+          if (btnText) btnText.textContent = "Playing Founder's Voice...";
+        }).catch(() => {
+          // If audio source is silent or not found, still toggle UI state cleanly
+          if (playIcon) playIcon.textContent = '⏸';
+          if (btnText) btnText.textContent = "Narration Active";
+        });
+      } else {
+        audioEl.pause();
+        if (playIcon) playIcon.textContent = '▶';
+        if (btnText) btnText.textContent = "Listen to Founder's Story";
+      }
+    });
+
+    audioEl.addEventListener('ended', () => {
+      if (playIcon) playIcon.textContent = '▶';
+      if (btnText) btnText.textContent = "Listen to Founder's Story";
+    });
+  }
+</script>
+
+<style>
+  .video-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(24, 21, 18, 0.78);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .video-modal-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .video-modal-card {
+    background-color: var(--bg-card);
+    border: var(--border-width) solid var(--border-ink);
+    border-radius: var(--radius-xl);
+    box-shadow: 8px 8px 0px var(--border-ink);
+    max-width: 620px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .video-modal-backdrop.is-open .video-modal-card {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid var(--border-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform 0.18s ease;
+  }
+
+  .modal-close-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .modal-media-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-bottom: var(--border-width) solid var(--border-ink);
+  }
+
+  .modal-story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .media-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    background: rgba(24, 21, 18, 0.85);
+    backdrop-filter: blur(4px);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--brand-coral);
+    animation: pulseDot 1.5s infinite;
+  }
+
+  .modal-body-content {
+    padding: 28px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .modal-story-title {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.25;
+  }
+
+  .modal-story-text {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .story-audio-box {
+    background-color: #FAF7F2;
+    border: 1.5px solid var(--border-ink);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .audio-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .audio-play-icon {
+    font-size: 0.9rem;
+    background: var(--brand-yellow);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-ink);
+  }
+
+  .modal-actions-row {
+    margin-top: 6px;
+  }
+
+  .modal-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+</style>

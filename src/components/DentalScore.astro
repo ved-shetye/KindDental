@@ -1,0 +1,226 @@
+---
+---
+
+<section class="score-section" id="dental-score">
+  <div class="container">
+    <div class="score-grid">
+      <!-- Left Content -->
+      <div class="score-content">
+        <span class="score-tag font-sans">YOUR KIND DENTAL SCORE</span>
+        <h2 class="score-title font-serif">Check and track your Kind Dental Score</h2>
+        <p class="score-desc font-sans">
+          Every patient leaves with a personal score out of 10 — built from decay, gum health, wear, existing work and smile satisfaction. Track it over time, understand exactly where you stand, and know precisely what to do next.
+        </p>
+
+        <!-- Interactive Score Components Pill Pills -->
+        <div class="score-factors">
+          <div class="factor-badge">
+            <span class="factor-name">Decay</span>
+            <span class="factor-score">1.9/2</span>
+          </div>
+          <div class="factor-badge">
+            <span class="factor-name">Gum Health</span>
+            <span class="factor-score">1.8/2</span>
+          </div>
+          <div class="factor-badge">
+            <span class="factor-name">Wear</span>
+            <span class="factor-score">1.7/2</span>
+          </div>
+          <div class="factor-badge">
+            <span class="factor-name">Smile Satisfaction</span>
+            <span class="factor-score">1.6/2</span>
+          </div>
+          <div class="factor-badge">
+            <span class="factor-name">Existing Work</span>
+            <span class="factor-score">1.5/2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Circular Gauge Meter matching video -->
+      <div class="score-dial-column">
+        <div class="score-gauge-container">
+          <svg class="score-gauge-svg" viewBox="0 0 200 200">
+            <!-- Background Track -->
+            <circle
+              class="gauge-track"
+              cx="100"
+              cy="100"
+              r="76"
+            />
+            <!-- Animated Yellow Arc for 8.5 out of 10 (85% of 477.5 ≈ 405.8) -->
+            <circle
+              class="gauge-progress"
+              cx="100"
+              cy="100"
+              r="76"
+              stroke-dasharray="477.5"
+              stroke-dashoffset="71.6"
+            />
+          </svg>
+
+          <!-- Inside Center Score Text -->
+          <div class="gauge-center-content">
+            <span class="gauge-score-value font-serif">8.5</span>
+            <span class="gauge-score-label font-sans">KIND DENTAL SCORE / 10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .score-section {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .score-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .score-tag {
+    color: #D4A359;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+
+  .score-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    color: #FAF7F2;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  .score-desc {
+    font-size: 1.05rem;
+    color: #C5BCB3;
+    line-height: 1.65;
+    max-width: 540px;
+    margin-bottom: 28px;
+  }
+
+  /* Score Factors Breakdown */
+  .score-factors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .factor-badge {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-full);
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #DDD5CD;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .factor-badge:hover {
+    background: rgba(244, 191, 58, 0.15);
+    border-color: rgba(244, 191, 58, 0.4);
+    color: #FFFFFF;
+  }
+
+  .factor-name {
+    font-weight: 500;
+  }
+
+  .factor-score {
+    font-weight: 700;
+    color: #F4BF3A;
+  }
+
+  /* Gauge Column */
+  .score-dial-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .score-gauge-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score-gauge-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .gauge-track {
+    fill: none;
+    stroke: #332D28;
+    stroke-width: 13px;
+  }
+
+  .gauge-progress {
+    fill: none;
+    stroke: var(--brand-yellow);
+    stroke-width: 13px;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .gauge-center-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .gauge-score-value {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+    letter-spacing: -0.03em;
+  }
+
+  .gauge-score-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #D4A359;
+  }
+
+  @media (max-width: 850px) {
+    .score-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+    .score-desc {
+      margin: 0 auto 28px;
+    }
+    .score-factors {
+      justify-content: center;
+    }
+  }
+</style>

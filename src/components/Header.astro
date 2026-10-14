@@ -1,0 +1,76 @@
+---
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand-link" aria-label="Kind Dental Home">
+      <img src="/logo-icon.png" alt="Kind Dental Icon" class="brand-icon" />
+      <span class="brand-text">KIND DENTAL</span>
+    </a>
+
+    <div class="header-actions">
+      <a href="#founder-offer" class="btn-pill-dark">
+        Join Waitlist
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(24, 21, 18, 0.08);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .brand-link:hover {
+    opacity: 0.85;
+  }
+
+  .brand-icon {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .brand-text {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--text-dark);
+  }
+
+  @media (max-width: 640px) {
+    .header-inner {
+      height: 64px;
+    }
+    .brand-icon {
+      height: 24px;
+    }
+    .brand-text {
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+    }
+  }
+</style>
