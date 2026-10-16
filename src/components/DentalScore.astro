@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="score-section" id="dental-score">
@@ -7,9 +8,14 @@
       <!-- Left Content -->
       <div class="score-content">
         <span class="score-tag font-sans">YOUR KIND DENTAL SCORE</span>
-        <h2 class="score-title font-serif">Check and track your Kind Dental Score</h2>
+        <h2 class="score-title font-serif">
+          Check and track your Kind Dental Score
+        </h2>
         <p class="score-desc font-sans">
-          Every patient leaves with a personal score out of 10 — built from decay, gum health, wear, existing work and smile satisfaction. Track it over time, understand exactly where you stand, and know precisely what to do next.
+          Every patient leaves with a personal score out of 10 — built from
+          decay, gum health, wear, existing work and smile satisfaction. Track
+          it over time, understand exactly where you stand, and know precisely
+          what to do next.
         </p>
 
         <!-- Interactive Score Components Pill Pills -->
@@ -42,12 +48,7 @@
         <div class="score-gauge-container">
           <svg class="score-gauge-svg" viewBox="0 0 200 200">
             <!-- Background Track -->
-            <circle
-              class="gauge-track"
-              cx="100"
-              cy="100"
-              r="76"
-            />
+            <circle class="gauge-track" cx="100" cy="100" r="76"></circle>
             <!-- Animated Yellow Arc for 8.5 out of 10 (85% of 477.5 ≈ 405.8) -->
             <circle
               class="gauge-progress"
@@ -55,14 +56,15 @@
               cy="100"
               r="76"
               stroke-dasharray="477.5"
-              stroke-dashoffset="71.6"
-            />
+              stroke-dashoffset="71.6"></circle>
           </svg>
 
           <!-- Inside Center Score Text -->
           <div class="gauge-center-content">
             <span class="gauge-score-value font-serif">8.5</span>
-            <span class="gauge-score-label font-sans">KIND DENTAL SCORE / 10</span>
+            <span class="gauge-score-label font-sans"
+              >KIND DENTAL SCORE / 10</span
+            >
           </div>
         </div>
       </div>
@@ -87,7 +89,7 @@
   }
 
   .score-tag {
-    color: #D4A359;
+    color: #d4a359;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -98,7 +100,7 @@
   .score-title {
     font-size: clamp(2.2rem, 4vw, 3.2rem);
     line-height: 1.15;
-    color: #FAF7F2;
+    color: #faf7f2;
     margin-bottom: 20px;
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -106,7 +108,7 @@
 
   .score-desc {
     font-size: 1.05rem;
-    color: #C5BCB3;
+    color: #c5bcb3;
     line-height: 1.65;
     max-width: 540px;
     margin-bottom: 28px;
@@ -128,14 +130,16 @@
     align-items: center;
     gap: 8px;
     font-size: 0.82rem;
-    color: #DDD5CD;
-    transition: background 0.2s ease, border-color 0.2s ease;
+    color: #ddd5cd;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
   }
 
   .factor-badge:hover {
     background: rgba(244, 191, 58, 0.15);
     border-color: rgba(244, 191, 58, 0.4);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .factor-name {
@@ -144,7 +148,7 @@
 
   .factor-score {
     font-weight: 700;
-    color: #F4BF3A;
+    color: #f4bf3a;
   }
 
   /* Gauge Column */
@@ -171,7 +175,7 @@
 
   .gauge-track {
     fill: none;
-    stroke: #332D28;
+    stroke: #332d28;
     stroke-width: 13px;
   }
 
@@ -198,16 +202,16 @@
     font-size: 4.2rem;
     font-weight: 700;
     line-height: 1;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 6px;
     letter-spacing: -0.03em;
   }
 
   .gauge-score-label {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    color: #D4A359;
+    letter-spacing: 0.12em;
+    color: #d4a359;
   }
 
   @media (max-width: 850px) {
