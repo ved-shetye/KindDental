@@ -207,3 +207,10 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: #C2B8A7;
 }
+
+/* Interactive Focus Glow */
+.highlight-glow {
+  outline: 3px solid var(--brand-terracotta) !important;
+  box-shadow: 0 0 14px rgba(184, 88, 52, 0.45) !important;
+  transition: all 0.3s ease;
+}
