@@ -26,6 +26,39 @@ import HeroOffer from "./HeroOffer.astro";
             stroke-linejoin="round"></path>
         </svg>
       </div>
+
+      <div class="hero-countdown-block">
+        <div class="countdown-badge-wrapper">
+          <span class="countdown-heading font-serif">Coming soon 🎉</span>
+        </div>
+
+        <div
+          class="countdown-grid"
+          id="countdown-timer"
+          aria-label="Countdown to launch"
+        >
+          <div class="countdown-card">
+            <span class="countdown-value" id="days-val">51</span>
+            <span class="countdown-label">DAYS</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-value" id="hours-val">15</span>
+            <span class="countdown-label">HRS</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-value" id="minutes-val">15</span>
+            <span class="countdown-label">MIN</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-value" id="seconds-val">43</span>
+            <span class="countdown-label">SEC</span>
+          </div>
+        </div>
+
+        <p class="countdown-subtext">
+          First 1,000 founder spots close 1 Dec 2026
+        </p>
+      </div>
     </div>
 
     <!-- Founder Offer Block: 50% Off & Free Membership Cards -->
@@ -103,11 +136,6 @@ import HeroOffer from "./HeroOffer.astro";
         <a href="#founder-offer" class="btn-pill-yellow hero-join-btn">
           JOIN NOW
         </a>
-        <p class="hero-social-proof">
-          🔥 Founders list filling up already — <span class="spots-counter-sync"
-            >0</span
-          > of 1,000 joined
-        </p>
       </div>
     </div>
   </div>
@@ -186,7 +214,68 @@ import HeroOffer from "./HeroOffer.astro";
   .sparkle-emoji {
     display: inline-block;
     filter: drop-shadow(0 2px 4px rgba(244, 191, 58, 0.4));
-  } /* Video Card */
+  }
+
+  .hero-countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .countdown-badge-wrapper {
+    margin-bottom: 12px;
+  }
+
+  .countdown-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .countdown-grid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .countdown-card {
+    background-color: #1f1b18;
+    color: #ffffff;
+    width: 62px;
+    height: 68px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .countdown-value {
+    font-family: var(--font-sans);
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+
+  .countdown-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #a9a29a;
+    letter-spacing: 0.08em;
+  }
+
+  .countdown-subtext {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+  }
+
+  /* Video Card */
   .hero-video-wrapper {
     max-width: 720px;
     margin: 0 auto;

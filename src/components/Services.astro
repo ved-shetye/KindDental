@@ -25,7 +25,7 @@
         <div class="card-content-area">
           <h3 class="service-title font-serif">Oral Hygiene & Prevention</h3>
           <p class="service-desc">
-            AirFlow hygiene therapy and prevention-first care to keep you healthy, not just fix problems when they show up.
+            AirPolish hygiene therapy and prevention-first care to keep your mouth healthy.
           </p>
         </div>
       </article>
@@ -46,7 +46,7 @@
         <div class="card-content-area">
           <h3 class="service-title font-serif">AI Dental Report & Your Kind Dental Score</h3>
           <p class="service-desc">
-            Digital scans and AI-supported monitoring, turned into a personal score out of 10 you can actually understand.
+            Digital scans and AI-supported monitoring, that you can access with a personal score for you keep track of your oral health.
           </p>
         </div>
       </article>
@@ -66,17 +66,98 @@
         <div class="card-content-area">
           <h3 class="service-title font-serif">Kids Dental Exams</h3>
           <p class="service-desc">
-            Gentle, friendly check-ups that build healthy habits early — and take the fear out of the dentist for good.
+            Gentle, friendly check-ups that build healthy habits early — and make seeing the dentist feel good and routine.
           </p>
         </div>
       </article>
     </div>
 
-    <!-- Mid Quote Banner -->
-    <div class="services-quote-banner">
-      <p class="quote-text font-sans">
-        Healthy habits from the start, for <strong>lifelong healthy teeth</strong>.
-      </p>
+    <!-- Middle Video Embed (3 cards above, image/video embed, 2 cards below) -->
+    <div class="services-media-wrapper">
+      <div
+        class="services-video-card"
+        id="services-video-btn"
+        data-open-video="true"
+        role="button"
+        tabindex="0"
+        aria-label="Play Kind Dental story video"
+      >
+        <img
+          src="/jane-story.jpg"
+          alt="Kind Dental Studio Experience with Jane"
+          class="services-video-img"
+          loading="lazy"
+        />
+
+        <div class="video-card-overlay"></div>
+
+        <!-- Top-left custom arch corner mark from video -->
+        <div class="corner-mark top-left">
+          <svg
+            viewBox="0 0 40 40"
+            width="36"
+            height="36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 8 28 C 12 12, 28 12, 32 28"
+              stroke="#181512"
+              stroke-width="2.5"
+              stroke-linecap="round"></path>
+            <circle cx="20" cy="18" r="2.2" fill="#181512"></circle>
+          </svg>
+        </div>
+
+        <!-- Bottom-right custom arch corner mark from video -->
+        <div class="corner-mark bottom-right">
+          <svg
+            viewBox="0 0 40 40"
+            width="36"
+            height="36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 8 16 C 12 28, 28 28, 32 16"
+              stroke="#181512"
+              stroke-width="2.5"
+              stroke-linecap="round"></path>
+            <circle cx="15" cy="22" r="1.5" fill="#181512"></circle>
+            <circle cx="25" cy="22" r="1.5" fill="#181512"></circle>
+          </svg>
+        </div>
+
+        <!-- Center Interactive Play Button -->
+        <div class="play-button-circle">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="#181512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M 8 5 V 19 L 19 12 Z"></path>
+          </svg>
+        </div>
+
+        <!-- Floating Badge -->
+        <div class="services-video-badge">
+          <span class="live-dot"></span>
+          <span>INSIDE KIND DENTAL · JANE'S STORY</span>
+        </div>
+
+        <div class="video-overlay-hint">
+          <span>Click to watch the experience</span>
+        </div>
+      </div>
+
+      <!-- Mid Quote Banner -->
+      <div class="services-quote-banner">
+        <p class="quote-text font-sans">
+          Healthy habits from the start, for <strong>lifelong healthy teeth</strong>.
+        </p>
+      </div>
     </div>
 
     <!-- Row 2: 2 Cards Centered -->
@@ -94,7 +175,7 @@
         <div class="card-content-area">
           <h3 class="service-title font-serif">Teeth Straightening</h3>
           <p class="service-desc">
-            Clear aligner treatment for adults and kids — straighter smiles without the metal-mouth look.
+            Clear aligners and fixed braces for adults and kids — straighter long lasting natural smiles.
           </p>
         </div>
       </article>
@@ -138,9 +219,177 @@
     margin-bottom: 36px;
   }
 
+  /* Middle Video Embed */
+  .services-media-wrapper {
+    max-width: 780px;
+    margin: 44px auto 44px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-video-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9.5;
+    max-height: 420px;
+    border: var(--border-width) solid var(--border-ink);
+    border-radius: var(--radius-xl);
+    box-shadow: 4px 4px 0px var(--border-ink);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAF7F2;
+    transition:
+      transform 0.22s cubic-bezier(0.2, 0, 0, 1),
+      box-shadow 0.22s ease;
+  }
+
+  .services-video-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px var(--border-ink);
+  }
+
+  .services-video-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .services-video-card:hover .services-video-img {
+    transform: scale(1.03);
+  }
+
+  .video-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 21, 18, 0.12) 0%,
+      rgba(24, 21, 18, 0.35) 100%
+    );
+    transition: background 0.25s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .services-video-card:hover .video-card-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(24, 21, 18, 0.08) 0%,
+      rgba(24, 21, 18, 0.22) 100%
+    );
+  }
+
+  .corner-mark {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .corner-mark.top-left {
+    top: 18px;
+    left: 20px;
+  }
+
+  .corner-mark.bottom-right {
+    bottom: 16px;
+    right: 20px;
+  }
+
+  .play-button-circle {
+    position: relative;
+    z-index: 3;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: var(--border-width) solid var(--border-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    padding-left: 3px;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .services-video-card:hover .play-button-circle {
+    transform: scale(1.12);
+    background-color: var(--brand-yellow);
+  }
+
+  .services-video-badge {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    background: rgba(24, 21, 18, 0.85);
+    backdrop-filter: blur(6px);
+    color: #FAF7F2;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .live-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #E25E4B;
+    animation: pulseDot 1.8s infinite;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(0.85);
+    }
+  }
+
+  .video-overlay-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(24, 21, 18, 0.8);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.03em;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .services-video-card:hover .video-overlay-hint {
+    opacity: 1;
+  }
+
   .services-quote-banner {
     text-align: center;
-    margin: 32px auto 44px;
+    margin: 28px auto 0;
     padding: 12px 20px;
   }
 
@@ -231,6 +480,29 @@
     }
     .services-grid-bottom {
       grid-template-columns: 1fr;
+    }
+    .services-video-card {
+      aspect-ratio: 16 / 10;
+    }
+    .play-button-circle {
+      width: 60px;
+      height: 60px;
+    }
+    .services-video-badge {
+      font-size: 0.65rem;
+      padding: 5px 12px;
+      top: 14px;
+      left: 14px;
+    }
+    .corner-mark.top-left {
+      top: 12px;
+      left: 12px;
+      transform: scale(0.85);
+    }
+    .corner-mark.bottom-right {
+      bottom: 12px;
+      right: 12px;
+      transform: scale(0.85);
     }
   }
 </style>

@@ -12,10 +12,10 @@
           Check and track your Kind Dental Score
         </h2>
         <p class="score-desc font-sans">
-          Every patient leaves with a personal score out of 10 — built from
-          decay, gum health, wear, existing work and smile satisfaction. Track
-          it over time, understand exactly where you stand, and know precisely
-          what to do next.
+          If you are a Member, you will leave with a personal score based on the
+          health of your teeth, gums, soft tissues, daily habits and how you feel
+          about your smile. Understand your oral health, get personalised
+          guidance, and track your progress over time.
         </p>
 
         <!-- Interactive Score Components Pill Pills -->
@@ -40,6 +40,13 @@
             <span class="factor-name">Existing Work</span>
             <span class="factor-score">1.5/2</span>
           </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="score-cta-wrapper">
+          <a href="#founder-offer" class="btn-pill-yellow score-cta-btn">
+            Claim Offer to Check your Score
+          </a>
         </div>
       </div>
 
@@ -151,6 +158,17 @@
     color: #f4bf3a;
   }
 
+  /* CTA Button */
+  .score-cta-wrapper {
+    margin-top: 32px;
+  }
+
+  .score-cta-btn {
+    font-size: 0.98rem;
+    padding: 13px 30px;
+    letter-spacing: 0.02em;
+  }
+
   /* Gauge Column */
   .score-dial-column {
     display: flex;
@@ -224,6 +242,10 @@
       margin: 0 auto 28px;
     }
     .score-factors {
+      justify-content: center;
+    }
+    .score-cta-wrapper {
+      display: flex;
       justify-content: center;
     }
   }

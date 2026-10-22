@@ -78,7 +78,16 @@
     }
   }
 
-  if (openBtn) openBtn.addEventListener('click', openModal);
+  document.querySelectorAll('#open-video-btn, #services-video-btn, [data-open-video]').forEach((btn) => {
+    btn.addEventListener('click', openModal);
+    btn.addEventListener('keydown', (e) => {
+      const evt = e as KeyboardEvent;
+      if (evt.key === 'Enter' || evt.key === ' ') {
+        evt.preventDefault();
+        openModal();
+      }
+    });
+  });
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (modalJoinBtn) modalJoinBtn.addEventListener('click', closeModal);
 

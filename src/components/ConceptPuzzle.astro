@@ -15,12 +15,12 @@
     <!-- 4 Interlocking Puzzle Pieces in 2x2 Grid -->
     <div class="puzzle-container" aria-label="Core values puzzle">
       <div class="puzzle-grid">
-        <!-- 1. Kindness (Top-Left) -> Lights up Yellow -->
-        <div class="puzzle-item" data-value="kindness" tabindex="0" role="button" aria-label="Core Value: Kindness">
+        <!-- 1. Prevention (Top-Left) -> Lights up Mint Green -->
+        <div class="puzzle-item" data-value="prevention" tabindex="0" role="button" aria-label="Core Value: Prevention">
           <svg class="puzzle-svg" viewBox="-5 -5 195 195" preserveAspectRatio="none">
             <!-- Top: flat, Right: tab (out), Bottom: tab (out), Left: flat -->
             <path
-              class="puzzle-path piece-kindness"
+              class="puzzle-path piece-prevention"
               d="
                 M 12 0
                 H 148
@@ -35,35 +35,6 @@
                 C 52 185, 52 158, 60 160
                 H 12
                 A 12 12 0 0 1 0 148
-                V 12
-                A 12 12 0 0 1 12 0
-                Z
-              "
-            />
-          </svg>
-          <div class="puzzle-label font-serif">Kindness</div>
-        </div>
-
-        <!-- 2. Prevention (Top-Right) -> Lights up Mint Green -->
-        <div class="puzzle-item" data-value="prevention" tabindex="0" role="button" aria-label="Core Value: Prevention">
-          <svg class="puzzle-svg" viewBox="-5 -5 195 195" preserveAspectRatio="none">
-            <!-- Top: flat, Right: flat, Bottom: tab (out), Left: hole (in) -->
-            <path
-              class="puzzle-path piece-prevention"
-              d="
-                M 12 0
-                H 148
-                A 12 12 0 0 1 160 12
-                V 148
-                A 12 12 0 0 1 148 160
-                H 100
-                C 108 158, 108 185, 80 185
-                C 52 185, 52 158, 60 160
-                H 12
-                A 12 12 0 0 1 0 148
-                V 100
-                C 2 108, 25 108, 25 80
-                C 25 52, 2 52, 0 60
                 V 12
                 A 12 12 0 0 1 12 0
                 Z
@@ -73,12 +44,41 @@
           <div class="puzzle-label font-serif">Prevention</div>
         </div>
 
-        <!-- 3. Innovation (Bottom-Left) -> Lights up Blue -->
+        <!-- 2. Innovation (Top-Right) -> Lights up Blue -->
         <div class="puzzle-item" data-value="innovation" tabindex="0" role="button" aria-label="Core Value: Innovation">
+          <svg class="puzzle-svg" viewBox="-5 -5 195 195" preserveAspectRatio="none">
+            <!-- Top: flat, Right: flat, Bottom: tab (out), Left: hole (in) -->
+            <path
+              class="puzzle-path piece-innovation"
+              d="
+                M 12 0
+                H 148
+                A 12 12 0 0 1 160 12
+                V 148
+                A 12 12 0 0 1 148 160
+                H 100
+                C 108 158, 108 185, 80 185
+                C 52 185, 52 158, 60 160
+                H 12
+                A 12 12 0 0 1 0 148
+                V 100
+                C 2 108, 25 108, 25 80
+                C 25 52, 2 52, 0 60
+                V 12
+                A 12 12 0 0 1 12 0
+                Z
+              "
+            />
+          </svg>
+          <div class="puzzle-label font-serif">Innovation</div>
+        </div>
+
+        <!-- 3. Clarity (Bottom-Left) -> Lights up Soft Pink/Peach -->
+        <div class="puzzle-item" data-value="clarity" tabindex="0" role="button" aria-label="Core Value: Clarity">
           <svg class="puzzle-svg" viewBox="-5 -5 195 195" preserveAspectRatio="none">
             <!-- Top: hole (in), Right: tab (out), Bottom: flat, Left: flat -->
             <path
-              class="puzzle-path piece-innovation"
+              class="puzzle-path piece-clarity"
               d="
                 M 12 0
                 H 60
@@ -99,15 +99,15 @@
               "
             />
           </svg>
-          <div class="puzzle-label font-serif">Innovation</div>
+          <div class="puzzle-label font-serif">Clarity</div>
         </div>
 
-        <!-- 4. Clarity (Bottom-Right) -> Lights up Soft Pink/Peach -->
-        <div class="puzzle-item" data-value="clarity" tabindex="0" role="button" aria-label="Core Value: Clarity">
+        <!-- 4. Kindness (Bottom-Right) -> Lights up Yellow -->
+        <div class="puzzle-item" data-value="kindness" tabindex="0" role="button" aria-label="Core Value: Kindness">
           <svg class="puzzle-svg" viewBox="-5 -5 195 195" preserveAspectRatio="none">
             <!-- Top: hole (in), Right: flat, Bottom: flat, Left: hole (in) -->
             <path
-              class="puzzle-path piece-clarity"
+              class="puzzle-path piece-kindness"
               d="
                 M 12 0
                 H 60
@@ -128,7 +128,7 @@
               "
             />
           </svg>
-          <div class="puzzle-label font-serif">Clarity</div>
+          <div class="puzzle-label font-serif">Kindness</div>
         </div>
       </div>
     </div>
