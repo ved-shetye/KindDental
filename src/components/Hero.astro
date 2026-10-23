@@ -396,10 +396,14 @@ import HeroOffer from "./HeroOffer.astro";
   }
 
   @media (max-width: 768px) {
+    .hero-section {
+      padding: 20px 0 24px;
+    }
     .hero-top-grid {
       flex-direction: column;
       align-items: stretch;
-      gap: 30px;
+      gap: 20px;
+      margin-bottom: 28px;
     }
     .hero-countdown-block {
       align-items: flex-start;
@@ -411,6 +415,9 @@ import HeroOffer from "./HeroOffer.astro";
     .countdown-card {
       flex: 1;
       max-width: 72px;
+    }
+    .hero-cta-group {
+      margin-top: 22px;
     }
   }
 </style>

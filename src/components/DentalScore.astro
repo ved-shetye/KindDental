@@ -233,20 +233,34 @@
   }
 
   @media (max-width: 850px) {
+    .score-section {
+      padding: 32px 0 36px;
+    }
     .score-grid {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 24px;
       text-align: center;
     }
+    .score-title {
+      margin-bottom: 14px;
+    }
     .score-desc {
-      margin: 0 auto 28px;
+      margin: 0 auto 20px;
     }
     .score-factors {
       justify-content: center;
     }
     .score-cta-wrapper {
+      margin-top: 22px;
       display: flex;
       justify-content: center;
+    }
+    .score-gauge-container {
+      width: 210px;
+      height: 210px;
+    }
+    .gauge-score-value {
+      font-size: 3.6rem;
     }
   }
 </style>

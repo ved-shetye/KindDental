@@ -83,6 +83,13 @@ button {
   padding: 0 24px;
 }
 
+@media (max-width: 640px) {
+  .container,
+  .container-narrow {
+    padding: 0 16px;
+  }
+}
+
 /* Typography Helpers */
 .font-serif {
   font-family: var(--font-serif);
