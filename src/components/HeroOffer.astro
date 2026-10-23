@@ -7,7 +7,9 @@
   <div class="hero-offer-header">
     <h2 class="hero-offer-title font-serif">
       The first 1,000 get<br />
-      <span class="text-terracotta">50% off</span> and more.
+      <span class="text-terracotta">50% off</span> and more. <span
+        class="celebration-emoji">🎉</span
+      >
     </h2>
     <p class="hero-offer-subtitle">Sign up now to beat the rush.</p>
   </div>
@@ -67,8 +69,12 @@
             <line x1="16" y1="11" x2="16" y2="27"></line>
           </svg>
         </div>
-        <span class="bonus-tagline font-sans">YOUR FOUNDING MEMBER BONUS</span>
-        <h3 class="offer-card-title font-serif">Digital Dental Health Report</h3>
+        <span class="bonus-tagline text-dark font-sans"
+          >YOUR <span class="text-gold">FOUNDING MEMBER</span> BONUS</span
+        >
+        <h3 class="offer-card-title font-serif">
+          Digital Dental Health Report
+        </h3>
       </div>
       <div class="offer-pricing-block">
         <span class="bonus-free-text font-serif">FREE</span>
@@ -212,6 +218,11 @@
     font-weight: 700;
   }
 
+  .celebration-emoji {
+    display: inline-block;
+    filter: drop-shadow(0 2px 4px rgba(244, 191, 58, 0.4));
+  }
+
   .hero-offer-subtitle {
     font-size: clamp(0.92rem, 1.4vw, 1.05rem);
     font-weight: 600;
@@ -307,8 +318,11 @@
     font-size: 0.62rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #9e5637;
     margin-bottom: 6px;
+  }
+
+  .text-gold {
+    color: var(--brand-gold, #b8860b);
   }
 
   .offer-card-title {
