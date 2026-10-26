@@ -311,297 +311,325 @@
       </article>
     </div>
 
-    <!-- Mobile Carousel Slider (Shows after video on mobile, slides horizontally & automatically) -->
+    <!-- Mobile Carousel Slider (One card at a time, drag sideways or auto-advances every 5s) -->
     <div
       class="services-mobile-slider mobile-only"
       aria-label="Kind Dental Services Carousel"
+      id="services-mobile-carousel"
     >
-      <div class="slider-viewport" id="services-slider-viewport">
+      <div
+        class="slider-viewport"
+        id="services-slider-viewport"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Services carousel"
+      >
         <div class="slider-track" id="services-slider-track">
           <!-- Card 1: Oral Hygiene & Prevention (Yellow) -->
-          <article class="service-card editorial-card card-yellow mobile-card" tabindex="0">
-            <div class="card-icon-area">
-              <svg
-                class="service-svg-icon"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M 18 36 C 24 46, 40 46, 46 36"
-                  stroke="#181512"
-                  stroke-width="3"
-                  stroke-linecap="round"></path>
-                <circle cx="32" cy="22" r="3.5" fill="#181512"></circle>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Oral Hygiene & Prevention</h3>
-              <p class="service-desc">
-                AirPolish hygiene therapy and prevention-first care to keep your
-                mouth healthy.
-              </p>
-            </div>
-          </article>
+          <div class="slider-slide" data-slide-index="0">
+            <article
+              class="service-card editorial-card card-yellow mobile-card"
+              tabindex="0"
+            >
+              <div class="card-icon-area">
+                <svg
+                  class="service-svg-icon"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 18 36 C 24 46, 40 46, 46 36"
+                    stroke="#181512"
+                    stroke-width="3"
+                    stroke-linecap="round"></path>
+                  <circle cx="32" cy="22" r="3.5" fill="#181512"></circle>
+                </svg>
+              </div>
+              <div class="card-content-area">
+                <span class="service-slide-tag font-sans">01 · HYGIENE</span>
+                <h3 class="service-title font-serif">
+                  Oral Hygiene & Prevention
+                </h3>
+                <p class="service-desc">
+                  AirPolish hygiene therapy and prevention-first care to keep
+                  your mouth healthy.
+                </p>
+              </div>
+            </article>
+          </div>
 
           <!-- Card 2: AI Dental Report & Your Kind Dental Score (Blue) -->
-          <article class="service-card editorial-card card-blue mobile-card" tabindex="0">
-            <div class="card-icon-area">
-              <svg
-                class="service-svg-icon"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  x="18"
-                  y="14"
-                  width="28"
-                  height="36"
-                  rx="4"
-                  stroke="#181512"
-                  stroke-width="3"></rect>
-                <line
-                  x1="24"
-                  y1="22"
-                  x2="38"
-                  y2="22"
-                  stroke="#181512"
-                  stroke-width="2.5"
-                  stroke-linecap="round"></line>
-                <line
-                  x1="24"
-                  y1="28"
-                  x2="38"
-                  y2="28"
-                  stroke="#181512"
-                  stroke-width="2.5"
-                  stroke-linecap="round"></line>
-                <circle
-                  cx="44"
-                  cy="44"
-                  r="8"
-                  fill="#FAF7F2"
-                  stroke="#181512"
-                  stroke-width="2.5"></circle>
-                <polyline
-                  points="44 40 44 44 47 44"
-                  stroke="#181512"
-                  stroke-width="2"
-                  stroke-linecap="round"></polyline>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">
-                AI Dental Report & Your Kind Dental Score
-              </h3>
-              <p class="service-desc">
-                Digital scans and AI-supported monitoring, that you can access with
-                a personal score for you keep track of your oral health.
-              </p>
-            </div>
-          </article>
+          <div class="slider-slide" data-slide-index="1">
+            <article
+              class="service-card editorial-card card-blue mobile-card"
+              tabindex="0"
+            >
+              <div class="card-icon-area">
+                <svg
+                  class="service-svg-icon"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="18"
+                    y="14"
+                    width="28"
+                    height="36"
+                    rx="4"
+                    stroke="#181512"
+                    stroke-width="3"></rect>
+                  <line
+                    x1="24"
+                    y1="22"
+                    x2="38"
+                    y2="22"
+                    stroke="#181512"
+                    stroke-width="2.5"
+                    stroke-linecap="round"></line>
+                  <line
+                    x1="24"
+                    y1="28"
+                    x2="38"
+                    y2="28"
+                    stroke="#181512"
+                    stroke-width="2.5"
+                    stroke-linecap="round"></line>
+                  <circle
+                    cx="44"
+                    cy="44"
+                    r="8"
+                    fill="#FAF7F2"
+                    stroke="#181512"
+                    stroke-width="2.5"></circle>
+                  <polyline
+                    points="44 40 44 44 47 44"
+                    stroke="#181512"
+                    stroke-width="2"
+                    stroke-linecap="round"></polyline>
+                </svg>
+              </div>
+              <div class="card-content-area">
+                <span class="service-slide-tag font-sans">02 · AI SCAN</span>
+                <h3 class="service-title font-serif">
+                  AI Dental Report & Your Kind Dental Score
+                </h3>
+                <p class="service-desc">
+                  Digital scans and AI-supported monitoring, that you can access
+                  with a personal score for you keep track of your oral health.
+                </p>
+              </div>
+            </article>
+          </div>
 
           <!-- Card 3: Kids Dental Exams (Orange) -->
-          <article class="service-card editorial-card card-orange mobile-card" tabindex="0">
-            <div class="card-icon-area">
-              <svg
-                class="service-svg-icon"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="32" cy="34" r="14" stroke="#181512" stroke-width="3"
-                ></circle>
-                <path
-                  d="M 32 20 C 30 14, 38 12, 36 20"
-                  stroke="#181512"
-                  stroke-width="2.5"
-                  stroke-linecap="round"></path>
-                <circle cx="27" cy="33" r="1.8" fill="#181512"></circle>
-                <circle cx="37" cy="33" r="1.8" fill="#181512"></circle>
-                <path
-                  d="M 28 39 Q 32 43 36 39"
-                  stroke="#181512"
-                  stroke-width="2"
-                  stroke-linecap="round"></path>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Kids Dental Exams</h3>
-              <p class="service-desc">
-                Gentle, friendly check-ups that build healthy habits early — and
-                make seeing the dentist feel good and routine.
-              </p>
-            </div>
-          </article>
+          <div class="slider-slide" data-slide-index="2">
+            <article
+              class="service-card editorial-card card-orange mobile-card"
+              tabindex="0"
+            >
+              <div class="card-icon-area">
+                <svg
+                  class="service-svg-icon"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="32"
+                    cy="34"
+                    r="14"
+                    stroke="#181512"
+                    stroke-width="3"></circle>
+                  <path
+                    d="M 32 20 C 30 14, 38 12, 36 20"
+                    stroke="#181512"
+                    stroke-width="2.5"
+                    stroke-linecap="round"></path>
+                  <circle cx="27" cy="33" r="1.8" fill="#181512"></circle>
+                  <circle cx="37" cy="33" r="1.8" fill="#181512"></circle>
+                  <path
+                    d="M 28 39 Q 32 43 36 39"
+                    stroke="#181512"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+              </div>
+              <div class="card-content-area">
+                <span class="service-slide-tag font-sans">03 · KIDS</span>
+                <h3 class="service-title font-serif">Kids Dental Exams</h3>
+                <p class="service-desc">
+                  Gentle, friendly check-ups that build healthy habits early —
+                  and make seeing the dentist feel good and routine.
+                </p>
+              </div>
+            </article>
+          </div>
 
           <!-- Card 4: Teeth Straightening (Purple) -->
-          <article class="service-card editorial-card card-purple mobile-card" tabindex="0">
-            <div class="card-icon-area">
-              <svg
-                class="service-svg-icon"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="18"
-                  y1="32"
-                  x2="46"
-                  y2="32"
-                  stroke="#181512"
-                  stroke-width="3"
-                  stroke-linecap="round"></line>
-                <polyline
-                  points="26 24 18 32 26 40"
-                  stroke="#181512"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></polyline>
-                <polyline
-                  points="38 24 46 32 38 40"
-                  stroke="#181512"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></polyline>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Teeth Straightening</h3>
-              <p class="service-desc">
-                Clear aligners and fixed braces for adults and kids — straighter
-                long lasting natural smiles.
-              </p>
-            </div>
-          </article>
+          <div class="slider-slide" data-slide-index="3">
+            <article
+              class="service-card editorial-card card-purple mobile-card"
+              tabindex="0"
+            >
+              <div class="card-icon-area">
+                <svg
+                  class="service-svg-icon"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="18"
+                    y1="32"
+                    x2="46"
+                    y2="32"
+                    stroke="#181512"
+                    stroke-width="3"
+                    stroke-linecap="round"></line>
+                  <polyline
+                    points="26 24 18 32 26 40"
+                    stroke="#181512"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></polyline>
+                  <polyline
+                    points="38 24 46 32 38 40"
+                    stroke="#181512"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></polyline>
+                </svg>
+              </div>
+              <div class="card-content-area">
+                <span class="service-slide-tag font-sans"
+                  >04 · ORTHODONTICS</span
+                >
+                <h3 class="service-title font-serif">Teeth Straightening</h3>
+                <p class="service-desc">
+                  Clear aligners and fixed braces for adults and kids —
+                  straighter long lasting natural smiles.
+                </p>
+              </div>
+            </article>
+          </div>
 
           <!-- Card 5: Teeth Whitening (Green) -->
-          <article class="service-card editorial-card card-green mobile-card" tabindex="0">
-            <div class="card-icon-area">
-              <svg
-                class="service-svg-icon"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M 22 28 C 22 20, 42 20, 42 28 C 42 38, 38 46, 32 46 C 26 46, 22 38, 22 28 Z"
-                  stroke="#181512"
-                  stroke-width="2.5"
-                  fill="none"></path>
-                <path
-                  d="M 46 16 L 47.5 20.5 L 52 22 L 47.5 23.5 L 46 28 L 44.5 23.5 L 40 22 L 44.5 20.5 Z"
-                  fill="#181512"></path>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Teeth Whitening</h3>
-              <p class="service-desc">
-                Safe, effective whitening to bring your natural smile back to its
-                brightest.
-              </p>
-            </div>
-          </article>
-
-          <!-- Loop Set 2 for seamless infinite scroll -->
-          <!-- Card 1 (Duplicate) -->
-          <article class="service-card editorial-card card-yellow mobile-card" tabindex="-1" aria-hidden="true">
-            <div class="card-icon-area">
-              <svg class="service-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 18 36 C 24 46, 40 46, 46 36" stroke="#181512" stroke-width="3" stroke-linecap="round"></path>
-                <circle cx="32" cy="22" r="3.5" fill="#181512"></circle>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Oral Hygiene & Prevention</h3>
-              <p class="service-desc">AirPolish hygiene therapy and prevention-first care to keep your mouth healthy.</p>
-            </div>
-          </article>
-
-          <!-- Card 2 (Duplicate) -->
-          <article class="service-card editorial-card card-blue mobile-card" tabindex="-1" aria-hidden="true">
-            <div class="card-icon-area">
-              <svg class="service-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="18" y="14" width="28" height="36" rx="4" stroke="#181512" stroke-width="3"></rect>
-                <line x1="24" y1="22" x2="38" y2="22" stroke="#181512" stroke-width="2.5" stroke-linecap="round"></line>
-                <line x1="24" y1="28" x2="38" y2="28" stroke="#181512" stroke-width="2.5" stroke-linecap="round"></line>
-                <circle cx="44" cy="44" r="8" fill="#FAF7F2" stroke="#181512" stroke-width="2.5"></circle>
-                <polyline points="44 40 44 44 47 44" stroke="#181512" stroke-width="2" stroke-linecap="round"></polyline>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">AI Dental Report & Your Kind Dental Score</h3>
-              <p class="service-desc">Digital scans and AI-supported monitoring, that you can access with a personal score for you keep track of your oral health.</p>
-            </div>
-          </article>
-
-          <!-- Card 3 (Duplicate) -->
-          <article class="service-card editorial-card card-orange mobile-card" tabindex="-1" aria-hidden="true">
-            <div class="card-icon-area">
-              <svg class="service-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="34" r="14" stroke="#181512" stroke-width="3"></circle>
-                <path d="M 32 20 C 30 14, 38 12, 36 20" stroke="#181512" stroke-width="2.5" stroke-linecap="round"></path>
-                <circle cx="27" cy="33" r="1.8" fill="#181512"></circle>
-                <circle cx="37" cy="33" r="1.8" fill="#181512"></circle>
-                <path d="M 28 39 Q 32 43 36 39" stroke="#181512" stroke-width="2" stroke-linecap="round"></path>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Kids Dental Exams</h3>
-              <p class="service-desc">Gentle, friendly check-ups that build healthy habits early — and make seeing the dentist feel good and routine.</p>
-            </div>
-          </article>
-
-          <!-- Card 4 (Duplicate) -->
-          <article class="service-card editorial-card card-purple mobile-card" tabindex="-1" aria-hidden="true">
-            <div class="card-icon-area">
-              <svg class="service-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="18" y1="32" x2="46" y2="32" stroke="#181512" stroke-width="3" stroke-linecap="round"></line>
-                <polyline points="26 24 18 32 26 40" stroke="#181512" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
-                <polyline points="38 24 46 32 38 40" stroke="#181512" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Teeth Straightening</h3>
-              <p class="service-desc">Clear aligners and fixed braces for adults and kids — straighter long lasting natural smiles.</p>
-            </div>
-          </article>
-
-          <!-- Card 5 (Duplicate) -->
-          <article class="service-card editorial-card card-green mobile-card" tabindex="-1" aria-hidden="true">
-            <div class="card-icon-area">
-              <svg class="service-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 22 28 C 22 20, 42 20, 42 28 C 42 38, 38 46, 32 46 C 26 46, 22 38, 22 28 Z" stroke="#181512" stroke-width="2.5" fill="none"></path>
-                <path d="M 46 16 L 47.5 20.5 L 52 22 L 47.5 23.5 L 46 28 L 44.5 23.5 L 40 22 L 44.5 20.5 Z" fill="#181512"></path>
-              </svg>
-            </div>
-            <div class="card-content-area">
-              <h3 class="service-title font-serif">Teeth Whitening</h3>
-              <p class="service-desc">Safe, effective whitening to bring your natural smile back to its brightest.</p>
-            </div>
-          </article>
+          <div class="slider-slide" data-slide-index="4">
+            <article
+              class="service-card editorial-card card-green mobile-card"
+              tabindex="0"
+            >
+              <div class="card-icon-area">
+                <svg
+                  class="service-svg-icon"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 22 28 C 22 20, 42 20, 42 28 C 42 38, 38 46, 32 46 C 26 46, 22 38, 22 28 Z"
+                    stroke="#181512"
+                    stroke-width="2.5"
+                    fill="none"></path>
+                  <path
+                    d="M 46 16 L 47.5 20.5 L 52 22 L 47.5 23.5 L 46 28 L 44.5 23.5 L 40 22 L 44.5 20.5 Z"
+                    fill="#181512"></path>
+                </svg>
+              </div>
+              <div class="card-content-area">
+                <span class="service-slide-tag font-sans">05 · WHITENING</span>
+                <h3 class="service-title font-serif">Teeth Whitening</h3>
+                <p class="service-desc">
+                  Safe, effective whitening to bring your natural smile back to
+                  its brightest.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
 
-      <!-- Slider indicator dots -->
-      <div class="slider-dots" aria-hidden="true">
-        <button type="button" class="services-slider-dot active" aria-label="Go to service 1" data-index="0"></button>
-        <button type="button" class="services-slider-dot" aria-label="Go to service 2" data-index="1"></button>
-        <button type="button" class="services-slider-dot" aria-label="Go to service 3" data-index="2"></button>
-        <button type="button" class="services-slider-dot" aria-label="Go to service 4" data-index="3"></button>
-        <button type="button" class="services-slider-dot" aria-label="Go to service 5" data-index="4"></button>
+      <!-- Slider Controls (Arrows + Dots) -->
+      <div class="slider-controls-bar">
+        <button
+          type="button"
+          class="slider-arrow-btn"
+          id="services-prev-btn"
+          aria-label="Previous service"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="slider-dots" aria-label="Services carousel pagination">
+          <button
+            type="button"
+            class="services-slider-dot active"
+            aria-label="Go to service 1"
+            data-index="0"></button>
+          <button
+            type="button"
+            class="services-slider-dot"
+            aria-label="Go to service 2"
+            data-index="1"></button>
+          <button
+            type="button"
+            class="services-slider-dot"
+            aria-label="Go to service 3"
+            data-index="2"></button>
+          <button
+            type="button"
+            class="services-slider-dot"
+            aria-label="Go to service 4"
+            data-index="3"></button>
+          <button
+            type="button"
+            class="services-slider-dot"
+            aria-label="Go to service 5"
+            data-index="4"></button>
+        </div>
+
+        <button
+          type="button"
+          class="slider-arrow-btn"
+          id="services-next-btn"
+          aria-label="Next service"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
 
-      <!-- Swipe / Drag Hint -->
+      <!-- Swipe / Drag & Auto-timer Status Hint -->
       <div class="slider-swipe-hint">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-        <span>Swipe sideways or let it slide</span>
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
+        <span class="slider-counter-badge" id="services-slider-counter"
+          >01 / 05</span
+        >
+        <span class="hint-divider">·</span>
+        <span class="timer-pulse-dot"></span>
+        <span>Swipe sideways · Changes every 5s</span>
       </div>
     </div>
   </div>
@@ -958,74 +986,65 @@
       transform: scale(0.85);
     }
 
-    /* Mobile Slider Container (Spans full viewport width) */
+    /* Mobile Slider Container (One card at a time with swipe & auto 5s progression) */
     .services-mobile-slider {
-      width: 100vw;
+      width: 100%;
+      max-width: 380px;
+      margin: 8px auto 20px;
       position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      overflow: hidden;
-      padding: 6px 0 16px;
     }
 
     .slider-viewport {
       width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      overflow: hidden;
       cursor: grab;
-      padding: 10px 0 16px;
-      touch-action: pan-x pan-y;
-      will-change: scroll-position;
-      scroll-behavior: auto !important;
-    }
-
-    .slider-viewport::-webkit-scrollbar {
-      display: none;
-    }
-
-    .slider-viewport.is-dragging {
-      cursor: grabbing;
+      touch-action: pan-y;
+      padding: 6px 6px 14px 6px;
+      margin: -6px -6px -14px -6px;
       user-select: none;
       -webkit-user-select: none;
     }
 
+    .slider-viewport.is-dragging {
+      cursor: grabbing;
+    }
+
     .slider-track {
       display: flex;
-      gap: 16px;
-      width: max-content;
-      padding: 0 20px;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .slider-slide {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      padding: 0 10px;
     }
 
     .mobile-card {
-      width: 275px;
-      min-width: 275px;
-      max-width: 275px;
-      flex-shrink: 0;
+      width: 100%;
       border: var(--border-width) solid var(--border-ink);
-      border-radius: var(--radius-lg);
-      box-shadow: 3px 3px 0px var(--border-ink);
+      border-radius: var(--radius-xl);
+      box-shadow: 4px 4px 0px var(--border-ink);
       background-color: #faf7f2;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       user-select: none;
       -webkit-user-select: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .mobile-card:active {
       transform: scale(0.99);
     }
 
-    /* On mobile, cards are colored directly (colored only) in order */
+    /* On mobile, cards have their brand color on top icon area */
     .mobile-card.card-yellow .card-icon-area {
       background-color: var(--brand-yellow) !important;
     }
@@ -1047,248 +1066,530 @@
     }
 
     .mobile-card .card-icon-area {
-      height: 110px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: var(--border-width) solid var(--border-ink);
+      transition: background-color 0.25s ease;
     }
 
     .mobile-card .service-svg-icon {
-      width: 46px;
-      height: 46px;
+      width: 52px;
+      height: 52px;
     }
 
     .mobile-card .card-content-area {
-      padding: 18px 20px 22px;
+      padding: 20px 20px 24px;
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 140px;
+    }
+
+    .service-slide-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
     }
 
     .mobile-card .service-title {
-      font-size: 1.05rem;
+      font-size: 1.15rem;
+      font-weight: 600;
       margin-bottom: 8px;
       line-height: 1.25;
+      color: var(--text-dark);
     }
 
     .mobile-card .service-desc {
-      font-size: 0.88rem;
-      line-height: 1.45;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Navigation Controls Bar (Arrows + Dots) */
+    .slider-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .slider-arrow-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: var(--border-width) solid var(--border-ink);
+      background-color: #faf7f2;
+      box-shadow: 2.5px 2.5px 0px var(--border-ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .slider-arrow-btn:hover {
+      background-color: var(--brand-yellow);
+      transform: translateY(-1px);
+      box-shadow: 3.5px 3.5px 0px var(--border-ink);
+    }
+
+    .slider-arrow-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0.5px 0.5px 0px var(--border-ink);
     }
 
     /* Slider Dots Indicator */
     .slider-dots {
       display: flex;
-      justify-content: center;
       align-items: center;
       gap: 8px;
-      margin-top: 10px;
-      margin-bottom: 6px;
     }
 
     .services-slider-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+      width: 9px;
+      height: 9px;
+      border-radius: var(--radius-full);
       background-color: #dfd7cb;
       border: 1.5px solid var(--border-ink);
       padding: 0;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      transition: all 0.28s cubic-bezier(0.2, 0, 0, 1);
+      -webkit-tap-highlight-color: transparent;
     }
 
     .services-slider-dot.active {
-      width: 22px;
-      border-radius: var(--radius-full);
+      width: 26px;
       background-color: var(--border-ink);
     }
 
-    /* Swipe / Drag Hint */
+    /* Swipe / Drag & Auto-timer Status Hint */
     .slider-swipe-hint {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      font-size: 0.72rem;
+      gap: 8px;
+      font-size: 0.74rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-top: 6px;
-      opacity: 0.85;
+      margin-top: 10px;
+    }
+
+    .slider-counter-badge {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      background: var(--bg-card);
+      border: 1px solid var(--border-ink);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      color: var(--text-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .hint-divider {
+      color: #b5ada3;
+    }
+
+    .timer-pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--brand-terracotta);
+      animation: pulseTimer 2s infinite;
+    }
+
+    @keyframes pulseTimer {
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
     }
   }
 </style>
 
 <script>
   function initServicesSlider() {
-    const viewport = document.getElementById('services-slider-viewport') as HTMLElement | null;
-    const track = document.getElementById('services-slider-track') as HTMLElement | null;
-    const dots = document.querySelectorAll('.services-slider-dot');
+    const container = document.getElementById(
+      "services-mobile-carousel",
+    ) as HTMLElement | null;
+    const viewport = document.getElementById(
+      "services-slider-viewport",
+    ) as HTMLElement | null;
+    const track = document.getElementById(
+      "services-slider-track",
+    ) as HTMLElement | null;
+    const prevBtn = document.getElementById(
+      "services-prev-btn",
+    ) as HTMLElement | null;
+    const nextBtn = document.getElementById(
+      "services-next-btn",
+    ) as HTMLElement | null;
+    const counter = document.getElementById(
+      "services-slider-counter",
+    ) as HTMLElement | null;
+    const dots = document.querySelectorAll(
+      ".services-slider-dot",
+    ) as NodeListOf<HTMLElement>;
 
-    if (!viewport || !track) return;
+    if (!container || !viewport || !track) return;
 
-    let isDown = false;
+    // Prevent duplicate initialization
+    if (track.getAttribute("data-slider-ready") === "true") return;
+    track.setAttribute("data-slider-ready", "true");
+
+    const originalSlides = Array.from(
+      track.querySelectorAll(".slider-slide"),
+    ) as HTMLElement[];
+    const totalOriginal = originalSlides.length; // 5
+    if (totalOriginal === 0) return;
+
+    // Setup clones for seamless infinite looping
+    const cloneLast = originalSlides[totalOriginal - 1].cloneNode(
+      true,
+    ) as HTMLElement;
+    cloneLast.setAttribute("aria-hidden", "true");
+    cloneLast.classList.add("slider-clone");
+
+    const cloneFirst = originalSlides[0].cloneNode(true) as HTMLElement;
+    cloneFirst.setAttribute("aria-hidden", "true");
+    cloneFirst.classList.add("slider-clone");
+
+    track.insertBefore(cloneLast, track.firstChild);
+    track.appendChild(cloneFirst);
+
+    // Index 1 corresponds to first real slide (Card 0)
+    let currentIndex = 1;
+    const totalWithClones = totalOriginal + 2; // 7
+
+    let isAnimating = false;
+    let isDragging = false;
+    let isHorizontalSwipe: boolean | null = null;
     let startX = 0;
-    let scrollStart = 0;
-    let isUserInteracting = false;
-    let resumeTimeout: ReturnType<typeof setTimeout> | null = null;
-    let animationFrameId: number | null = null;
-    let lastTime = performance.now();
+    let startY = 0;
+    let currentTranslateX = 0;
+    let viewportWidth = viewport.offsetWidth || 360;
 
-    // Very slow, calm ambient speed (16px per second for ultra-gentle movement)
-    const speedPerSecond = 16;
+    // 5-second automatic progression
+    const AUTO_INTERVAL = 5000;
+    let autoTimer: ReturnType<typeof setInterval> | null = null;
+    let isPaused = false;
 
-    // Cache dimensions to avoid layout thrashing during animation frames
-    let halfWidth = track.scrollWidth / 2;
-    let cardWidth = 275 + 16;
-    let lastDotIndex = -1;
+    const updateUI = (index: number) => {
+      // Map 1..5 to 0..4
+      const realIndex = (index - 1 + totalOriginal) % totalOriginal;
 
-    const measureLayout = () => {
-      const firstCard = track.querySelector('.mobile-card') as HTMLElement | null;
-      if (firstCard) {
-        cardWidth = firstCard.offsetWidth + 16;
-      }
-      halfWidth = track.scrollWidth / 2;
-    };
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === realIndex);
+      });
 
-    // Measure once on init and on window resize
-    measureLayout();
-    window.addEventListener('resize', measureLayout);
-
-    // High precision floating-point accumulator to prevent integer truncation stutter
-    let scrollPos = viewport.scrollLeft;
-
-    const updateActiveDot = () => {
-      if (!dots.length || cardWidth <= 0) return;
-      const currentScroll = halfWidth > 0 ? (scrollPos % halfWidth) : scrollPos;
-      const index = Math.min(4, Math.max(0, Math.floor((currentScroll + cardWidth * 0.3) / cardWidth) % 5));
-
-      if (index !== lastDotIndex) {
-        lastDotIndex = index;
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === index);
-        });
+      if (counter) {
+        counter.textContent = `0${realIndex + 1} / 0${totalOriginal}`;
       }
     };
 
-    const step = (now: number) => {
-      const dt = Math.min((now - lastTime) / 1000, 0.1); // clamp delta time for stability
-      lastTime = now;
-
-      if (window.innerWidth <= 900 && !isUserInteracting) {
-        scrollPos += speedPerSecond * dt;
-
-        if (halfWidth > 0 && scrollPos >= halfWidth) {
-          scrollPos -= halfWidth;
-        }
-
-        viewport.scrollLeft = scrollPos;
-        updateActiveDot();
+    const setPositionByIndex = (index: number, animate = true) => {
+      if (animate) {
+        track.style.transition =
+          "transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)";
+      } else {
+        track.style.transition = "none";
       }
-
-      animationFrameId = requestAnimationFrame(step);
+      track.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
     };
 
-    const pauseInteraction = () => {
-      isUserInteracting = true;
-      if (resumeTimeout) clearTimeout(resumeTimeout);
-      scrollPos = viewport.scrollLeft;
+    const goToSlide = (targetIndex: number, animate = true) => {
+      if (isAnimating && animate) return;
+
+      if (animate) {
+        isAnimating = true;
+      }
+      currentIndex = targetIndex;
+      setPositionByIndex(currentIndex, animate);
+      updateUI(currentIndex);
+      resetAutoSlide();
     };
 
-    const resumeInteraction = () => {
-      if (resumeTimeout) clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => {
-        scrollPos = viewport.scrollLeft;
-        lastTime = performance.now();
-        isUserInteracting = false;
-      }, 1500); // 1.5s idle pause after manual touch/swipe before slow auto-slide resumes
+    const nextSlide = () => {
+      goToSlide(currentIndex + 1, true);
     };
 
-    // Manual Mouse Dragging (for desktop browser resizing / testing)
-    viewport.addEventListener('mousedown', (e) => {
-      isDown = true;
-      viewport.classList.add('is-dragging');
-      pauseInteraction();
-      startX = e.pageX;
-      scrollStart = viewport.scrollLeft;
+    const prevSlide = () => {
+      goToSlide(currentIndex - 1, true);
+    };
+
+    // Seamless loop wrapping on animation completion
+    track.addEventListener("transitionend", (e) => {
+      if (e.target !== track) return;
+      isAnimating = false;
+
+      // Reached clone of first slide (at end)
+      if (currentIndex >= totalWithClones - 1) {
+        track.style.transition = "none";
+        currentIndex = 1;
+        track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+        void track.offsetWidth; // Force reflow
+      }
+      // Reached clone of last slide (at start)
+      else if (currentIndex <= 0) {
+        track.style.transition = "none";
+        currentIndex = totalOriginal;
+        track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+        void track.offsetWidth; // Force reflow
+      }
     });
 
-    window.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const dx = e.pageX - startX;
-      scrollPos = scrollStart - dx;
-
-      if (halfWidth > 0) {
-        if (scrollPos >= halfWidth) {
-          scrollPos -= halfWidth;
-          scrollStart -= halfWidth;
-        } else if (scrollPos <= 0) {
-          scrollPos += halfWidth;
-          scrollStart += halfWidth;
+    // Auto-slide 5s timer
+    const startAutoSlide = () => {
+      stopAutoSlide();
+      autoTimer = setInterval(() => {
+        if (window.innerWidth <= 900 && !isPaused && !isDragging) {
+          nextSlide();
         }
-      }
-      viewport.scrollLeft = scrollPos;
-      updateActiveDot();
-    });
-
-    const stopDrag = () => {
-      if (!isDown) return;
-      isDown = false;
-      viewport.classList.remove('is-dragging');
-      resumeInteraction();
+      }, AUTO_INTERVAL);
     };
 
-    window.addEventListener('mouseup', stopDrag);
+    const stopAutoSlide = () => {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+        autoTimer = null;
+      }
+    };
 
-    // Native Touch events for mobile devices
-    viewport.addEventListener('touchstart', pauseInteraction, { passive: true });
-    viewport.addEventListener('touchend', resumeInteraction, { passive: true });
-    viewport.addEventListener('touchcancel', resumeInteraction, { passive: true });
+    const resetAutoSlide = () => {
+      stopAutoSlide();
+      startAutoSlide();
+    };
 
-    // Handle native mobile momentum scroll and infinite wrap
-    viewport.addEventListener('scroll', () => {
-      if (isUserInteracting) {
-        scrollPos = viewport.scrollLeft;
-        if (halfWidth > 0) {
-          if (scrollPos >= halfWidth) {
-            scrollPos -= halfWidth;
-            viewport.scrollLeft = scrollPos;
-          } else if (scrollPos <= 0) {
-            scrollPos += halfWidth;
-            viewport.scrollLeft = scrollPos;
+    // Drag / Touch event handlers
+    const onDragStart = (clientX: number, clientY: number) => {
+      if (isAnimating) return;
+      isDragging = true;
+      isHorizontalSwipe = null;
+      startX = clientX;
+      startY = clientY;
+      viewportWidth = viewport.offsetWidth || 360;
+      currentTranslateX = -currentIndex * viewportWidth;
+      track.style.transition = "none";
+      viewport.classList.add("is-dragging");
+      stopAutoSlide();
+    };
+
+    const onDragMove = (clientX: number, clientY: number, e: Event) => {
+      if (!isDragging) return;
+
+      const dx = clientX - startX;
+      const dy = clientY - startY;
+
+      // Determine horizontal swipe vs vertical scroll
+      if (isHorizontalSwipe === null) {
+        if (Math.abs(dx) > 6 || Math.abs(dy) > 6) {
+          if (Math.abs(dx) > Math.abs(dy)) {
+            isHorizontalSwipe = true;
+          } else {
+            // Natural vertical scroll, don't interfere
+            isHorizontalSwipe = false;
+            isDragging = false;
+            viewport.classList.remove("is-dragging");
+            resetAutoSlide();
+            return;
           }
         }
-        updateActiveDot();
       }
-    }, { passive: true });
 
-    // Dot navigation buttons
-    dots.forEach((dot) => {
-      dot.addEventListener('click', (e) => {
+      if (isHorizontalSwipe) {
+        if (e.cancelable) e.preventDefault();
+        const newTranslate = currentTranslateX + dx;
+        track.style.transform = `translate3d(${newTranslate}px, 0, 0)`;
+      }
+    };
+
+    const onDragEnd = (clientX: number) => {
+      if (!isDragging) return;
+      isDragging = false;
+      viewport.classList.remove("is-dragging");
+
+      if (isHorizontalSwipe) {
+        const dx = clientX - startX;
+        const threshold = 40; // 40px drag threshold
+
+        if (dx < -threshold) {
+          goToSlide(currentIndex + 1, true);
+        } else if (dx > threshold) {
+          goToSlide(currentIndex - 1, true);
+        } else {
+          goToSlide(currentIndex, true);
+        }
+      } else {
+        goToSlide(currentIndex, true);
+      }
+
+      resetAutoSlide();
+    };
+
+    // Touch listeners
+    viewport.addEventListener(
+      "touchstart",
+      (e: TouchEvent) => {
+        if (e.touches.length === 1) {
+          onDragStart(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      },
+      { passive: true },
+    );
+
+    viewport.addEventListener(
+      "touchmove",
+      (e: TouchEvent) => {
+        if (e.touches.length === 1) {
+          onDragMove(e.touches[0].clientX, e.touches[0].clientY, e);
+        }
+      },
+      { passive: false },
+    );
+
+    viewport.addEventListener(
+      "touchend",
+      (e: TouchEvent) => {
+        if (e.changedTouches.length === 1) {
+          onDragEnd(e.changedTouches[0].clientX);
+        }
+      },
+      { passive: true },
+    );
+
+    viewport.addEventListener(
+      "touchcancel",
+      () => {
+        if (isDragging) {
+          isDragging = false;
+          viewport.classList.remove("is-dragging");
+          goToSlide(currentIndex, true);
+          resetAutoSlide();
+        }
+      },
+      { passive: true },
+    );
+
+    // Mouse listeners (for desktop inspection / dragging)
+    let lastMouseX = 0;
+    viewport.addEventListener("mousedown", (e: MouseEvent) => {
+      e.preventDefault();
+      lastMouseX = e.clientX;
+      onDragStart(e.clientX, e.clientY);
+    });
+
+    window.addEventListener("mousemove", (e: MouseEvent) => {
+      if (!isDragging) return;
+      lastMouseX = e.clientX;
+      onDragMove(e.clientX, e.clientY, e);
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (isDragging) {
+        onDragEnd(lastMouseX);
+      }
+    });
+
+    // Arrow button controls
+    if (prevBtn) {
+      prevBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
-        pauseInteraction();
-        scrollPos = idx * cardWidth;
-        viewport.scrollTo({
-          left: scrollPos,
-          behavior: 'smooth'
-        });
-        resumeInteraction();
+        prevSlide();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        nextSlide();
+      });
+    }
+
+    // Dot indicators click
+    dots.forEach((dot) => {
+      dot.addEventListener("click", (e) => {
+        e.preventDefault();
+        const dotIndex = parseInt(dot.getAttribute("data-index") || "0", 10);
+        goToSlide(dotIndex + 1, true);
       });
     });
 
     // Pause on hover
-    viewport.addEventListener('mouseenter', pauseInteraction);
-    viewport.addEventListener('mouseleave', resumeInteraction);
+    container.addEventListener("mouseenter", () => {
+      isPaused = true;
+    });
 
-    // Start auto-movement loop
-    lastTime = performance.now();
-    if (!animationFrameId) {
-      animationFrameId = requestAnimationFrame(step);
+    container.addEventListener("mouseleave", () => {
+      isPaused = false;
+      resetAutoSlide();
+    });
+
+    // Pause when tab hidden
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopAutoSlide();
+      } else {
+        resetAutoSlide();
+      }
+    });
+
+    // IntersectionObserver to pause when offscreen
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              isPaused = false;
+              resetAutoSlide();
+            } else {
+              isPaused = true;
+              stopAutoSlide();
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      observer.observe(container);
     }
+
+    // Keep correct slide alignment on window resize
+    window.addEventListener("resize", () => {
+      viewportWidth = viewport.offsetWidth || 360;
+      if (!isDragging) {
+        setPositionByIndex(currentIndex, false);
+      }
+    });
+
+    // Initial setup
+    setPositionByIndex(currentIndex, false);
+    updateUI(currentIndex);
+
+    // Launch the 5-second auto progression
+    startAutoSlide();
   }
 
-  // Initialize on DOM load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initServicesSlider);
+  // Initialize on DOM ready & View Transitions
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initServicesSlider);
   } else {
     initServicesSlider();
   }
+  document.addEventListener("astro:page-load", initServicesSlider);
 </script>
